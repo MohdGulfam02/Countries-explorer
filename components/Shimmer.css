@@ -1,0 +1,104 @@
+.shimmer {
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 4px;
+}
+/* Placeholder Styles */
+.shimmer-button {
+    width: 100px;
+    height: 32px;
+    margin-top: 8px;
+  }
+  
+  .shimmer-flag {
+    width: 40%;
+    height: 320px;
+  }
+  
+  .shimmer-title {
+    width: 200px;
+    height: 32px;
+    margin: 16px 0;
+  }
+  
+  .shimmer-line {
+    width: 280px;
+    height: 16px;
+    margin: 8px 0;
+  }
+  
+  .shimmer-border-tag {
+    width: 80px;
+    height: 28px;
+    margin: 4px;
+    border-radius: 4px;
+  }
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 940px) {
+  .shimmer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .shimmer-img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .details-shimmer-text {
+    max-height: unset;
+  }
+}
+
+/* Shimmer card list (countries placeholder) */
+.shimmer-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* YES – this works with flex */
+  gap: 64px;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 32px;
+}
+
+.shimmer-card {
+  display: inline-block;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  padding-bottom: 24px;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.shimmer-card .shimmer-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #ddd;
+}
+
+.shimmer-card .shimmer-line {
+  height: 14px;
+  border-radius: 4px;
+}
+
+.shimmer-card .shimmer-line.short {
+  width: 40%;
+}
+
+.shimmer-card .shimmer-line.medium {
+  width: 60%;
+}
