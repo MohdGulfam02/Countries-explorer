@@ -3,13 +3,12 @@ import SearchBar from "./SearchBar";
 import SelectMenu from "./SelectMenu";
 import CountiresList from "./CountiresList";
 import { useState } from "react";
-import { useOutletContext } from "react-router";
-
+import { useTheme } from "../hooks/useTheme";
 
 export default function Home() {
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
-  const [isDark] = useOutletContext();
+  const [isDark, setIsDark] = useTheme();
 
   const handleChange = (value) => {
     setSelectedRegion(value); // Get value from child

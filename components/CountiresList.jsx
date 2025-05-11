@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CountryCard from "./CountryCard.jsx";
 import CountriesListShimmer from "./CountriesListShimmer.jsx";
+import { ThemeContext } from "../contexts/ThemeContext.js";
 
 export default function CountiresList({ query, region }) {
   const [countriesData, setCountriesData] = useState([]);
+
 
   if (region) {
     useEffect(() => {

@@ -1,5 +1,7 @@
-export default function Header({theme}) {
-  const [isDark, setIsDark] = theme;
+import { useTheme } from "../hooks/useTheme";
+
+export default function Header() {
+  const [isDark, setIsDark] = useTheme();
 
   // isDark ? document.body.classList.add('dark') : document.body.classList.remove('dark');
 
